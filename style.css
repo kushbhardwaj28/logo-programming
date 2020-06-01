@@ -1,0 +1,60 @@
+html,
+body {
+	margin: 0;
+	padding: 0px 0px 0px 8px;
+	font-family: 'Work Sans', sans-serif;
+}
+
+canvas {
+	display: block;
+}
+
+.command-form-wrapper {
+	display: flex;
+	width: 400px;
+	height: 25px;
+	padding-bottom: 8px;
+}
+
+.command-input {
+	flex: 1 0 auto;
+	font-size: 16px;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	border-right: 0px;
+	border-radius: 2px 0px 0px 2px;
+	outline: none;
+}
+
+.submit-btn {
+	flex: 1 0 20px;
+	border: 0px;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	border-radius: 0px 2px 2px 0px;
+	outline: none;
+}
+
+.submit-icon {
+	color: rgb(0, 255, 0);
+}
+
+.note{
+	color: #b00020;
+	padding: 8px 0px ;
+}
+
+.description {
+	color: #3079cd;
+}
+
+.control {
+	color: #7572bd;
+}
+
+td, th {
+  text-align: left;
+  padding-right: 4px;
+}
+
+.example{
+  color: rgba(0, 0, 0, 0.75);
+}
