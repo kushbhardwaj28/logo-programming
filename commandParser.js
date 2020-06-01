@@ -25,7 +25,7 @@ function ParseCommand(turtle, command = []) {
 
   if (command[0].toLowerCase() == 'cs') {
     drawPath = true;
-    paths = [{ x: canvasWidth / 2, y: canvasHeight / 2 }];
+    paths = [{ x: canvasSize / 2, y: canvasSize / 2 }];
     turtle.reset();
   }
 
