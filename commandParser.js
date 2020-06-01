@@ -31,7 +31,7 @@ function ParseCommand(turtle, command = []) {
 
   if (command[0].toLowerCase() == 'ct') {
     turtle.reset();
-    paths.push({ x: canvasSize / 2, y: canvasSize / 2, drawPath: true });
+    paths.push({ x: turtle.x, y: turtle.y, drawPath: true });
   }
 
   if (command[0].toLowerCase() == 'st') {
