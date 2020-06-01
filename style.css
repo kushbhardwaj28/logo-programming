@@ -1,7 +1,7 @@
 html,
 body {
 	margin: 0;
-	padding: 0px 0px 0px 8px;
+	padding: 0px 8px 8px 8px;
 	font-family: 'Work Sans', sans-serif;
 }
 
@@ -57,4 +57,20 @@ td, th {
 
 .example{
   color: rgba(0, 0, 0, 0.75);
+}
+
+#control-container{
+	margin-bottom: 90px;
+}
+
+.width-controller{
+	display: flex;
+}
+
+.height-controller{
+	display: flex;
+}
+
+.width-slider{
+	margin-left: 5px;
 }

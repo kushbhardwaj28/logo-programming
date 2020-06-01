@@ -1,4 +1,7 @@
-<!DOCTYPE html><html><head>
+<!DOCTYPE html>
+<html>
+
+<head>
   <script src="p5.min.js"></script>
   <script src="p5.dom.min.js"></script>
   <script src="p5.sound.min.js"></script>
@@ -12,65 +15,80 @@
   <script src="sketch.js"></script>
   <script src="turtle.js"></script>
   <script src="commandParser.js"></script>
+  <div id="control-container">
+    <table class="command-list">
+      <tbody>
+        <tr>
+          <th>Command</th>
+          <th>Description</th>
+          <th>Example</th>
+        </tr>
+        <tr>
+          <td class="control">fd:</td>
+          <td><span class="description">Move forward</span></td>
+          <td><span class="example">fd 100</span></td>
+        </tr>
+        <tr>
+          <td class="control">bk:</td>
+          <td><span class="description">Move backward</span></td>
+          <td><span class="example">bk 100</span></td>
+        </tr>
+        <tr>
+          <td class="control">rt:</td>
+          <td><span class="description">Turn right</span></td>
+          <td><span class="example">rt 90</span></td>
+        </tr>
+        <tr>
+          <td class="control">lt:</td>
+          <td><span class="description">Turn left</span></td>
+          <td><span class="example">lt 90</span></td>
+        </tr>
+        <tr>
+          <td class="control">pu:</td>
+          <td><span class="description">Pen up</span></td>
+          <td><span class="example">pu</span></td>
+        </tr>
+        <tr>
+          <td class="control">pd:</td>
+          <td><span class="description">Pen down</span></td>
+          <td><span class="example">pd</span></td>
+        </tr>
+        <tr>
+          <td class="control">st:</td>
+          <td><span class="description">Show turtle</span></td>
+          <td><span class="example">st</span></td>
+        </tr>
+        <tr>
+          <td class="control">ht:</td>
+          <td><span class="description">Hide turtle</span></td>
+          <td><span class="example">ht</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="note">*Please enter one command at a time</div>
 
-  <table class="command-list">
-    <tbody><tr>
-      <th>Command</th>
-      <th>Description</th>
-      <th>Example</th>
-    </tr>
-    <tr>
-      <td class="control">fd:</td>
-      <td><span class="description">Move forward</span></td>
-      <td><span class="example">fd 100</span></td>
-    </tr>
-    <tr>
-      <td class="control">bk:</td>
-      <td><span class="description">Move backward</span></td>
-      <td><span class="example">bk 100</span></td>
-    </tr>
-    <tr>
-      <td class="control">rt:</td>
-      <td><span class="description">Turn right</span></td>
-      <td><span class="example">rt 90</span></td>
-    </tr>
-    <tr>
-      <td class="control">lt:</td>
-      <td><span class="description">Turn left</span></td>
-      <td><span class="example">lt 90</span></td>
-    </tr>
-    <tr>
-      <td class="control">pu:</td>
-      <td><span class="description">Pen up</span></td>
-      <td><span class="example">pu</span></td>
-    </tr>
-    <tr>
-      <td class="control">pd:</td>
-      <td><span class="description">Pen down</span></td>
-      <td><span class="example">pd</span></td>
-    </tr>
-  </tbody></table>
-  <div class="note">*Please enter one command at a time</div>
+    <div class="command-form-wrapper">
+      <input id="commands" class="command-input">
+      <button onclick="setCommands()" class="submit-btn">
+        <i class="material-icons submit-icon">
+          label_important
+        </i>
+      </button>
+    </div>
 
-  <div class="command-form-wrapper">
-    <input id="commands" class="command-input">
-    <button onclick="setCommands()" class="submit-btn">
-      <i class="material-icons submit-icon">
-        label_important
-      </i>
-    </button>
   </div>
 
 
+  <script>
+    let commandInput = document.getElementById("commands");
+    commandInput.addEventListener("keyup", function (event) {
+      event.preventDefault();
+      // Number 13 is the "Enter" key on the keyboard
+      if (event.keyCode === 13) {
+        setCommands();
+      }
+    });
+  </script>
+</body>
 
-
-<script>
-  let commandInput = document.getElementById("commands");
-  commandInput.addEventListener("keyup", function(event) {
-    event.preventDefault();
-    // Number 13 is the "Enter" key on the keyboard
-    if (event.keyCode === 13) {
-      setCommands();
-    }
-  });
-</script></body></html>
+</html>
